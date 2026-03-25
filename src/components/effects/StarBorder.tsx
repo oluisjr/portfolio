@@ -1,5 +1,7 @@
 'use client'
 
+import React, { JSX } from 'react'
+
 interface Props {
   children: React.ReactNode
   as?: keyof JSX.IntrinsicElements
