@@ -1,0 +1,177 @@
+{
+  "name": "portfolio",
+  "path": "c:\\portfolio",
+  "type": "directory",
+  "children": [
+    {
+      "name": "public",
+      "type": "folder",
+      "icon": "📁",
+      "children": [
+        {
+          "name": "file.svg",
+          "type": "file",
+          "icon": "🖼️"
+        },
+        {
+          "name": "globe.svg",
+          "type": "file",
+          "icon": "🖼️"
+        },
+        {
+          "name": "next.svg",
+          "type": "file",
+          "icon": "🖼️"
+        },
+        {
+          "name": "vercel.svg",
+          "type": "file",
+          "icon": "🖼️"
+        },
+        {
+          "name": "window.svg",
+          "type": "file",
+          "icon": "🖼️"
+        }
+      ]
+    },
+    {
+      "name": "src",
+      "type": "folder",
+      "icon": "📁",
+      "children": [
+        {
+          "name": "app",
+          "type": "folder",
+          "icon": "📁",
+          "children": [
+            {
+              "name": "favicon.ico",
+              "type": "file",
+              "icon": "📄"
+            },
+            {
+              "name": "globals.css",
+              "type": "file",
+              "icon": "🎨"
+            },
+            {
+              "name": "layout.tsx",
+              "type": "file",
+              "icon": "⚛️"
+            },
+            {
+              "name": "page.tsx",
+              "type": "file",
+              "icon": "⚛️"
+            }
+          ]
+        },
+        {
+          "name": "components",
+          "type": "folder",
+          "icon": "📁",
+          "children": [
+            {
+              "name": "About.tsx",
+              "type": "file",
+              "icon": "⚛️"
+            },
+            {
+              "name": "Contact.tsx",
+              "type": "file",
+              "icon": "⚛️"
+            },
+            {
+              "name": "Cursor.tsx",
+              "type": "file",
+              "icon": "⚛️"
+            },
+            {
+              "name": "Globals.css",
+              "type": "file",
+              "icon": "🎨"
+            },
+            {
+              "name": "Layout.tsx",
+              "type": "file",
+              "icon": "⚛️"
+            },
+            {
+              "name": "Loader.tsx",
+              "type": "file",
+              "icon": "⚛️"
+            },
+            {
+              "name": "Navbar.tsx",
+              "type": "file",
+              "icon": "⚛️"
+            },
+            {
+              "name": "Projects.tsx",
+              "type": "file",
+              "icon": "⚛️"
+            },
+            {
+              "name": "Stack.tsx",
+              "type": "file",
+              "icon": "⚛️"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": ".gitignore",
+      "type": "file",
+      "icon": "📁"
+    },
+    {
+      "name": "README.md",
+      "type": "file",
+      "icon": "📝"
+    },
+    {
+      "name": "Untitled-1.json",
+      "type": "file",
+      "icon": "⚙️"
+    },
+    {
+      "name": "eslint.config.mjs",
+      "type": "file",
+      "icon": "📄"
+    },
+    {
+      "name": "next.config.ts",
+      "type": "file",
+      "icon": "📘"
+    },
+    {
+      "name": "package-lock.json",
+      "type": "file",
+      "icon": "⚙️"
+    },
+    {
+      "name": "package.json",
+      "type": "file",
+      "icon": "📦"
+    },
+    {
+      "name": "postcss.config.mjs",
+      "type": "file",
+      "icon": "📄"
+    },
+    {
+      "name": "tsconfig.json",
+      "type": "file",
+      "icon": "⚙️"
+    }
+  ],
+  "metadata": {
+    "generated": "2026-03-19T00:14:29.692Z",
+    "generator": "FileTree Pro Extension",
+    "version": "0.2.0",
+    "showIcons": true,
+    "maxDepth": 10
+  }
+}
