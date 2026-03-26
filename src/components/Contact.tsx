@@ -5,9 +5,9 @@ import GradientText from '@/components/effects/GradientText'
 import StarBorder   from '@/components/effects/StarBorder'
 
 const socials = [
-  { label: 'GitHub',   href: 'https://github.com/luisignacio' },
+  { label: 'GitHub',   href: 'https://github.com/oluisjr' },
   { label: 'LinkedIn', href: 'https://linkedin.com/in/luisignacio' },
-  { label: 'Email',    href: 'mailto:luis@email.com' },
+  { label: 'Email',    href: 'mailto:luis87091@gmail.com' },
 ]
 
 export default function Contact() {
@@ -54,9 +54,9 @@ export default function Contact() {
         {/* Magnetic email */}
         <div ref={emailRef} onMouseMove={onEmailMove} onMouseLeave={onEmailLeave}
           style={{ display: 'inline-block', marginBottom: '5rem', transition: 'transform .4s var(--ease-expo)', opacity: headIn ? 1 : 0, animation: headIn ? 'fadeUp .7s var(--ease-expo) .55s both' : 'none' }}>
-          <StarBorder color="var(--lime)" speed="3s" href="mailto:luis@email.com">
+          <StarBorder color="var(--lime)" speed="3s" href="mailto:luis87091@gmail.com">
             <span style={{ display: 'flex', alignItems: 'center', gap: '1rem', fontFamily: 'var(--font-display)', fontSize: 'clamp(.85rem,2vw,1.3rem)', letterSpacing: '.12em', color: 'var(--lime)', padding: '1.1rem 2.5rem' }}>
-              LUIS@EMAIL.COM <span style={{ fontSize: '1.4rem' }}>→</span>
+              Fale comigo <span style={{ fontSize: '1.4rem' }}>→</span>
             </span>
           </StarBorder>
         </div>
