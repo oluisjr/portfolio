@@ -12,7 +12,7 @@ const projects = [
     descShort: 'Assistente IA conversacional em Streamlit.',
     tech: ['Python', 'Streamlit', 'LLM', 'Pandas'],
     link: 'https://mavisai.streamlit.app/',
-    img: '/projects/mavis.png' as string | null,
+    img: '/mavis.png' as string | null,
     bars: [60, 85, 45, 90, 70, 55, 80, 65, 95, 40],
   },
   {
@@ -24,7 +24,7 @@ const projects = [
     descShort: 'App web moderno de gestão de reuniões e presença.',
     tech: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
     link: 'https://smartpass-lake.vercel.app/',
-    img: '/projects/smartpass.png' as string | null,
+    img: '/smartpass.png' as string | null,
     bars: [40, 70, 55, 85, 60, 75, 50, 80, 45],
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     descShort: 'Dashboard estoque vs carteira com filtros dinâmicos.',
     tech: ['Python', 'Pandas', 'Plotly', 'Streamlit'],
     link: 'https://pqualidade.streamlit.app/',
-    img: '/projects/estoque-carteira.png' as string | null,
+    img: '/estoque-carteira.png' as string | null,
     bars: [75, 50, 90, 65, 80, 45, 70, 85, 55],
   },
   {
@@ -48,7 +48,7 @@ const projects = [
     descShort: 'Portal centralizado de treinamentos de qualidade.',
     tech: ['Python', 'Streamlit'],
     link: 'https://treinamentoqual.streamlit.app/',
-    img: '/projects/treinamentos-qualidade.png' as string | null,
+    img: '/treinamentos-qualidade.png' as string | null,
     bars: [50, 80, 65, 95, 55, 75, 85, 60, 70],
   },
   {
@@ -60,7 +60,7 @@ const projects = [
     descShort: 'Plataforma de ensino interativa Power Platform.',
     tech: ['Python', 'Streamlit', 'Power Apps', 'Power Automate'],
     link: 'https://powertreinamento.streamlit.app/',
-    img: '/projects/curso-power-platform.png' as string | null,
+    img: '/curso-power-platform.png' as string | null,
     bars: [65, 80, 50, 75, 90, 55, 70, 85, 45],
   },
   {
@@ -72,7 +72,7 @@ const projects = [
     descShort: 'Landing page editorial do bootcamp Power Platform.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     link: 'https://oluisjr.github.io/',
-    img: '/projects/chamada-power-platform.png' as string | null,
+    img: '/chamada-power-platform.png' as string | null,
     bars: [70, 55, 80, 60, 90, 45, 75, 85, 50],
   },
   {
