@@ -68,13 +68,13 @@ function WordReveal({ text, delay = 0 }: { text: string; delay?: number }) {
 }
 
 const timeline = [
-  { year: '2021', title: 'Primeiro script Python', desc: 'Automação de relatórios → 8h economizadas/semana' },
-  { year: '2022', title: 'Power Platform', desc: 'Apps e fluxos em produção na empresa' },
-  { year: '2023', title: 'Web & Dashboards', desc: 'Streamlit, HTML e primeiros projetos freelance' },
-  { year: '2024', title: 'Full stack de dados', desc: 'ML, scraping, APIs e Next.js no arsenal' },
+  { year: '2022', title: 'Primeiro script Python', desc: 'Automação de relatórios → 8h economizadas/semana' },
+  { year: '2023', title: 'Power Platform', desc: 'Apps e fluxos em produção na empresa' },
+  { year: '2024', title: 'Web & Dashboards', desc: 'Streamlit, HTML e primeiros projetos freelance' },
+  { year: '2025', title: 'Full stack de dados', desc: 'ML, scraping, APIs e Next.js no arsenal' },
 ]
 
-const tools = ['Python','Streamlit','Power BI','SQL','Next.js','Power Automate','Pandas','React','Azure','HTML/CSS','JavaScript','SharePoint']
+const tools = ['Python','Streamlit','Power BI','Qlik Cloud','SQL','Next.js','Power Automate','Pandas','React','Azure','HTML/CSS','JavaScript','SharePoint']
 
 export default function About() {
   const titleRef = useRef<HTMLDivElement>(null)
