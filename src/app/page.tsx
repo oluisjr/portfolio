@@ -81,9 +81,9 @@ function PageContent() {
         {/* Hero text — z=2, sits on top of Unicorn */}
         <div ref={heroTextRef} style={{
           position: 'absolute', inset: 0, zIndex: 2,
-          display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end',
-          padding: '0 2rem 6rem',
-          textAlign: 'center',
+          display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'flex-end',
+          padding: '0 2rem 6rem 4rem',
+          textAlign: 'left',
         }}>
           {/* Pill eyebrow */}
           <div style={{ display: 'inline-flex', alignItems: 'center', gap: '.9rem', background: 'rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.15)', borderRadius: 'var(--r-pill)', padding: '.55rem 1.5rem', marginBottom: '1.5rem', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', animation: heroReady ? 'fadeIn .9s var(--ease-expo) .1s both' : 'none' }}>
@@ -96,19 +96,19 @@ function PageContent() {
           {/* Name */}
           {heroReady && (
             <h1 style={{ lineHeight: .88, letterSpacing: '-.01em', textShadow: '0 2px 40px rgba(0,0,0,.5)' }}>
-              <span style={{ display: 'block', fontFamily: 'var(--font-display)', fontSize: 'clamp(4rem,14vw,13rem)', color: '#ffffff' }}>
-                <SplitText text="Luis" baseDelay={.3} />
+              <span style={{ display: 'block', fontFamily: 'var(--font-display)', fontSize: 'clamp(3.5rem,10vw,9rem)', color: '#ffffff' }}>
+                <SplitText text="LUIS" baseDelay={.3} />
               </span>
-              <span style={{ display: 'block', fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 900, fontSize: 'clamp(2.8rem,11vw,10rem)', letterSpacing: '-.02em', lineHeight: .9 }}>
+              <span style={{ display: 'block', fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 900, fontSize: 'clamp(2.2rem,7vw,6.5rem)', letterSpacing: '-.02em', lineHeight: .9 }}>
                 <GradientText colors={['#B4FF00','#e8ff88','#ffffff','#B4FF00']} speed="4s" style={{ fontFamily: 'var(--font-serif)', fontSize: 'inherit', lineHeight: 'inherit' }}>
-                  <SplitText text="Ignacio Jr." baseDelay={.52} />
+                  <SplitText text="IGNACIO JR." baseDelay={.52} />
                 </GradientText>
               </span>
             </h1>
           )}
 
           {/* Blink cursor */}
-          <div style={{ width: 2, height: 'clamp(1.5rem,3vw,2.5rem)', background: 'var(--lime)', marginTop: '.5rem', boxShadow: '0 0 14px var(--lime)', animation: heroReady ? 'blink 1.1s ease-in-out 2s infinite' : 'none', opacity: heroReady ? 1 : 0 }} />
+          <div style={{ width: 2, height: 'clamp(1.5rem,3vw,2.5rem)', alignSelf: 'flex-start', background: 'var(--lime)', marginTop: '.5rem', boxShadow: '0 0 14px var(--lime)', animation: heroReady ? 'blink 1.1s ease-in-out 2s infinite' : 'none', opacity: heroReady ? 1 : 0 }} />
 
           {/* Tagline */}
           <div style={{ marginTop: '1.5rem', animation: heroReady ? 'fadeUp .8s var(--ease-expo) 1.3s both' : 'none' }}>
