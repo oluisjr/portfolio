@@ -133,7 +133,7 @@ export default function About() {
             </div>
             <div className="dash-body" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
               <WordReveal delay={.15} text="Desenvolvedor com foco em dados, automação e interfaces que funcionam de verdade. Do scraper ao dashboard, da automação ao deploy." />
-              <WordReveal delay={.4} text="Não me limito a uma stack — uso o que resolve o problema com elegância." />
+              <WordReveal delay={.4} text="Não me limito a uma stack, uso o que resolve o problema com performance e elegância." />
               <div style={{ display: 'inline-flex', alignItems: 'center', gap: '.8rem', marginTop: '.25rem' }}>
                 <div style={{ width: 7, height: 7, borderRadius: '50%', background: 'var(--lime)', animation: 'pulse 2s infinite', flexShrink: 0 }} />
                 <span className="mono-sm" style={{ color: 'var(--lime)' }}>Disponível para projetos</span>
@@ -220,7 +220,7 @@ export default function About() {
         {/* ── CTAs ── */}
         <div style={{ display: 'flex', gap: '1rem', marginTop: '2.5rem', flexWrap: 'wrap' }}>
           <a href="#projects" className="glass-btn glass-btn-lime">Ver projetos →</a>
-          <a href="mailto:luis@email.com" className="glass-btn">Falar comigo →</a>
+          <a href="mailto:luis87091@gmail.com" className="glass-btn">Falar comigo →</a>
         </div>
       </div>
 
