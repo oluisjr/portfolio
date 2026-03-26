@@ -303,6 +303,23 @@ body::after {
   .detail-grid{grid-template-columns:1fr!important;}
   .stack-grid{grid-template-columns:1fr!important;}
 }
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-name .split-char {
+  background: linear-gradient(90deg, #B4FF00, #e8ff88, #ffffff, #B4FF00);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 4s ease infinite, fadeIn 0.5s both;
+  animation-delay: var(--delay, 0s), var(--delay, 0s);
+  display: inline-block;
+}
 @media(max-width:480px){
   .dash-body{padding:.85rem;}
   .s-h2{font-size:clamp(2rem,9vw,3rem)!important;}
