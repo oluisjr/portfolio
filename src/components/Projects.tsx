@@ -2,13 +2,103 @@
 import { useEffect, useRef, useState } from 'react'
 import StarBorder from '@/components/effects/StarBorder'
 
-
 const projects = [
-  { id: '01', year: '2024', accent: '#B4FF00', featured: true,  category: 'Streamlit · Python',       title: 'Dashboard de Análise',      titleItalic: 'de Análise',    desc: 'Pipeline de dados em tempo real com +50k linhas, filtros dinâmicos e cache otimizado. Reduziu 80% do tempo de análise manual.',          descShort: 'Pipeline +50k linhas, filtros dinâmicos.', tech: ['Python','Pandas','Plotly','Streamlit'], link: '#', img: null as string|null, bars: [60,85,45,90,70,55,80,65,95,40] },
-  { id: '02', year: '2024', accent: '#00d4ff', featured: false, category: 'Power Platform',            title: 'Automação Power Platform',  titleItalic: 'Power Platform', desc: 'Fluxo end-to-end de aprovação com SharePoint e Teams. Processo 70% mais rápido.',                                                       descShort: 'Aprovação automática, 70% mais rápido.',   tech: ['Power Apps','Power Automate','SharePoint'], link: '#', img: null as string|null, bars: [40,70,55,85,60,75,50,80,45] },
-  { id: '03', year: '2023', accent: '#ff6b35', featured: false, category: 'Python · HTML',             title: 'Web Scraper & Reporter',    titleItalic: '& Reporter',    desc: 'Coleta automatizada com relatórios HTML diários e alertas por email.',                                                                        descShort: 'Relatórios HTML automáticos.',             tech: ['Python','BeautifulSoup','Selenium'], link: '#', img: null as string|null, bars: [75,50,90,65,80,45,70,85,55] },
-  { id: '04', year: '2024', accent: '#B4FF00', featured: false, category: 'Scikit-learn · Streamlit',  title: 'ML Classifier App',         titleItalic: 'Classifier App', desc: 'Interface no-code para treinar e exportar modelos. Matriz de confusão e CSV.',                                                            descShort: 'ML sem código, exportação CSV.',           tech: ['Python','Scikit-learn','Streamlit'], link: '#', img: null as string|null, bars: [50,80,65,95,55,75,85,60,70] },
-  { id: '05', year: '2023', accent: '#b388ff', featured: false, category: 'HTML · CSS · JS',           title: 'Landing Page Interativa',   titleItalic: 'Interativa',    desc: 'Site de produto com parallax, micro-animações e 98/100 Lighthouse.',                                                                        descShort: 'Parallax, animações, 98/100 Lighthouse.',  tech: ['HTML','CSS','JavaScript'], link: '#', img: null as string|null, bars: [70,55,80,60,90,45,75,85,50] },
+  {
+    id: '01', year: '2025', accent: '#B4FF00', featured: true,
+    category: 'Streamlit · Python · IA',
+    title: 'MAVIS AI Assistant',
+    titleItalic: 'AI Assistant',
+    desc: 'Assistente inteligente com interface conversacional desenvolvido em Streamlit. Integração com modelos de linguagem para respostas contextuais, automação de tarefas e suporte a decisões baseado em dados.',
+    descShort: 'Assistente IA conversacional em Streamlit.',
+    tech: ['Python', 'Streamlit', 'LLM', 'Pandas'],
+    link: 'https://mavisai.streamlit.app/',
+    img: null as string | null,
+    bars: [60, 85, 45, 90, 70, 55, 80, 65, 95, 40],
+  },
+  {
+    id: '02', year: '2025', accent: '#00d4ff', featured: false,
+    category: 'Next.js · TypeScript',
+    title: 'SmartPass App',
+    titleItalic: 'App',
+    desc: 'Aplicação web moderna construída com Next.js e deploy na Vercel. Interface responsiva e performática para gestão de acessos com design limpo e experiência fluida.',
+    descShort: 'App web moderno com Next.js e Vercel.',
+    tech: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
+    link: 'https://smartpass-lake.vercel.app/',
+    img: null as string | null,
+    bars: [40, 70, 55, 85, 60, 75, 50, 80, 45],
+  },
+  {
+    id: '03', year: '2024', accent: '#ff6b35', featured: false,
+    category: 'Streamlit · Python',
+    title: 'Portal Controle Estoque',
+    titleItalic: 'Controle Estoque',
+    desc: 'Dashboard de controle de estoque vs carteira com pipeline de dados, filtros dinâmicos e cache otimizado. Centraliza análises de qualidade e reduz tempo de conferência manual.',
+    descShort: 'Dashboard estoque vs carteira com filtros dinâmicos.',
+    tech: ['Python', 'Pandas', 'Plotly', 'Streamlit'],
+    link: 'https://pqualidade.streamlit.app/',
+    img: null as string | null,
+    bars: [75, 50, 90, 65, 80, 45, 70, 85, 55],
+  },
+  {
+    id: '04', year: '2024', accent: '#B4FF00', featured: false,
+    category: 'Streamlit · Python',
+    title: 'Portal de Treinamentos',
+    titleItalic: 'de Treinamentos',
+    desc: 'Portal centralizado de treinamentos de qualidade com gestão de conteúdo, acompanhamento de progresso e acesso facilitado a materiais por área.',
+    descShort: 'Portal centralizado de treinamentos de qualidade.',
+    tech: ['Python', 'Streamlit'],
+    link: 'https://treinamentoqual.streamlit.app/',
+    img: null as string | null,
+    bars: [50, 80, 65, 95, 55, 75, 85, 60, 70],
+  },
+  {
+    id: '05', year: '2024', accent: '#b388ff', featured: false,
+    category: 'Streamlit · Power Platform',
+    title: 'Curso Power Platform',
+    titleItalic: 'Power Platform',
+    desc: 'Plataforma de ensino do curso Power Platform com módulos de conteúdo, exercícios práticos e acompanhamento de alunos via Streamlit.',
+    descShort: 'Plataforma de ensino Power Platform.',
+    tech: ['Python', 'Streamlit', 'Power Apps', 'Power Automate'],
+    link: 'https://powertreinamento.streamlit.app/',
+    img: null as string | null,
+    bars: [65, 80, 50, 75, 90, 55, 70, 85, 45],
+  },
+  {
+    id: '06', year: '2024', accent: '#00d4ff', featured: false,
+    category: 'HTML · CSS · JS',
+    title: 'Chamada Power Platform',
+    titleItalic: 'Power Platform',
+    desc: 'Landing page do curso Power Platform com chamada para inscrições, publicada via GitHub Pages. Design responsivo e objetivo para conversão de interessados.',
+    descShort: 'Landing page do curso Power Platform.',
+    tech: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://oluisjr.github.io/',
+    img: null as string | null,
+    bars: [70, 55, 80, 60, 90, 45, 75, 85, 50],
+  },
+  {
+    id: '07', year: '2024', accent: '#ff6b35', featured: false,
+    category: 'Power Apps · Teams',
+    title: 'Confirmação de Presença',
+    titleItalic: 'de Presença',
+    desc: 'App no Microsoft Teams para confirmação de presença de estagiários, integrado com SharePoint e notificações automáticas via Power Automate.',
+    descShort: 'App Teams para presença de estagiários.',
+    tech: ['Power Apps', 'Power Automate', 'SharePoint', 'Teams'],
+    link: '#',
+    img: null as string | null,
+    bars: [55, 75, 40, 85, 65, 80, 50, 70, 60],
+  },
+  {
+    id: '08', year: '2024', accent: '#b388ff', featured: false,
+    category: 'Power BI · Teams',
+    title: 'Rendimento Metálico Diário',
+    titleItalic: 'Metálico Diário',
+    desc: 'Dashboard no Microsoft Teams para acompanhamento do rendimento metálico diário, com alertas automáticos e histórico de variações para tomada de decisão ágil.',
+    descShort: 'Dashboard Teams para rendimento metálico.',
+    tech: ['Power Apps', 'Power BI', 'SharePoint', 'Teams'],
+    link: '#',
+    img: null as string | null,
+    bars: [80, 55, 70, 45, 85, 60, 75, 50, 65],
+  },
 ]
 
 function MockWin({ p, h }: { p: typeof projects[0]; h: number }) {
@@ -16,7 +106,7 @@ function MockWin({ p, h }: { p: typeof projects[0]; h: number }) {
     <div style={{ width: '100%', height: h, background: `linear-gradient(160deg,${p.accent}08,var(--bg))`, position: 'relative', overflow: 'hidden', flexShrink: 0 }}>
       <div style={{ position: 'absolute', inset: h > 200 ? '2rem' : '1rem', borderRadius: 8, background: 'rgba(255,255,255,.03)', border: '1px solid rgba(255,255,255,.07)', overflow: 'hidden' }}>
         <div style={{ padding: '.4rem .7rem', borderBottom: '1px solid rgba(255,255,255,.05)', display: 'flex', gap: '.3rem' }}>
-          {['#ff5f57','#febc2e','#28c840'].map(c => <div key={c} style={{ width: 6, height: 6, borderRadius: '50%', background: c, opacity: .7 }} />)}
+          {['#ff5f57', '#febc2e', '#28c840'].map(c => <div key={c} style={{ width: 6, height: 6, borderRadius: '50%', background: c, opacity: .7 }} />)}
         </div>
         <div style={{ padding: '.85rem', display: 'flex', flexDirection: 'column', gap: '.5rem' }}>
           <div style={{ display: 'flex', gap: '.2rem', alignItems: 'flex-end', height: h > 200 ? 52 : 36 }}>
@@ -24,7 +114,7 @@ function MockWin({ p, h }: { p: typeof projects[0]; h: number }) {
               <div key={i} style={{ flex: 1, height: `${bh}%`, background: p.accent, opacity: .12 + (i / p.bars.length) * .4, borderRadius: '2px 2px 0 0' }} />
             ))}
           </div>
-          {[70,50,85].map((w, i) => <div key={i} style={{ height: 3, width: `${w}%`, background: 'rgba(255,255,255,.07)', borderRadius: 2 }} />)}
+          {[70, 50, 85].map((w, i) => <div key={i} style={{ height: 3, width: `${w}%`, background: 'rgba(255,255,255,.07)', borderRadius: 2 }} />)}
         </div>
       </div>
       <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 2, background: `linear-gradient(90deg,${p.accent},${p.accent}40)`, boxShadow: `0 0 16px ${p.accent}70` }} />
@@ -64,7 +154,7 @@ function FeaturedCard({ p }: { p: typeof projects[0] }) {
             </div>
           </div>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', paddingTop: '1.75rem', borderTop: '1px solid var(--border)', marginTop: '1.75rem' }}>
-            <a href={p.link} className="glass-btn glass-btn-lime" style={{ fontSize: '.6rem', padding: '.45rem 1rem', letterSpacing: '.14em', textTransform: 'uppercase', fontFamily: 'var(--font-mono)' }}>Ver →</a>
+            <a href={p.link} target="_blank" rel="noopener noreferrer" className="glass-btn glass-btn-lime" style={{ fontSize: '.6rem', padding: '.45rem 1rem', letterSpacing: '.14em', textTransform: 'uppercase', fontFamily: 'var(--font-mono)' }}>Ver →</a>
             <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '3rem', color: 'rgba(255,255,255,.04)', userSelect: 'none' }}>{p.id}</span>
           </div>
         </div>
@@ -82,6 +172,8 @@ function SmallCard({ p, delay = 0 }: { p: typeof projects[0]; delay?: number }) 
     if (ref.current) obs.observe(ref.current)
     return () => obs.disconnect()
   }, [])
+
+  const isInternal = p.link === '#'
 
   return (
     <div ref={ref} className="glass glass-hover" onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
@@ -101,9 +193,14 @@ function SmallCard({ p, delay = 0 }: { p: typeof projects[0]; delay?: number }) 
           {p.tech.map(t => <span key={t} style={{ fontFamily: 'var(--font-mono)', fontSize: '.52rem', letterSpacing: '.08em', color: 'var(--gray-light)', border: '1px solid var(--border)', padding: '.2rem .55rem', borderRadius: 'var(--r-pill)', textTransform: 'uppercase' }}>{t}</span>)}
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '1.1rem', borderTop: '1px solid var(--border)' }}>
-          <a href={p.link} style={{ fontFamily: 'var(--font-mono)', fontSize: '.58rem', letterSpacing: '.14em', textTransform: 'uppercase', color: p.accent, textDecoration: 'none', transition: 'letter-spacing .25s' }}
-            onMouseEnter={e => (e.currentTarget.style.letterSpacing = '.22em')}
-            onMouseLeave={e => (e.currentTarget.style.letterSpacing = '.14em')}>Ver →</a>
+          {isInternal ? (
+            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '.58rem', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gray-mid)' }}>Interno</span>
+          ) : (
+            <a href={p.link} target="_blank" rel="noopener noreferrer"
+              style={{ fontFamily: 'var(--font-mono)', fontSize: '.58rem', letterSpacing: '.14em', textTransform: 'uppercase', color: p.accent, textDecoration: 'none', transition: 'letter-spacing .25s' }}
+              onMouseEnter={e => (e.currentTarget.style.letterSpacing = '.22em')}
+              onMouseLeave={e => (e.currentTarget.style.letterSpacing = '.14em')}>Ver →</a>
+          )}
           <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '2rem', color: 'rgba(255,255,255,.04)', userSelect: 'none' }}>{p.id}</span>
         </div>
       </div>
@@ -143,7 +240,7 @@ export default function Projects() {
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <a href="https://github.com/luisignacio" className="glass-btn">
+        <a href="https://github.com/oluisjr" target="_blank" rel="noopener noreferrer" className="glass-btn">
           Ver todos no GitHub →
         </a>
       </div>
