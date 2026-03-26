@@ -99,10 +99,16 @@ function PageContent() {
               <span style={{ display: 'block', fontFamily: 'var(--font-display)', fontSize: 'clamp(3.5rem,10vw,9rem)', color: '#ffffff' }}>
                 <SplitText text="LUIS" baseDelay={.3} />
               </span>
-              <span style={{ display: 'block', fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontWeight: 900, fontSize: 'clamp(2.2rem,7vw,6.5rem)', letterSpacing: '-.02em', lineHeight: .9 }}>
-                <GradientText colors={['#B4FF00','#e8ff88','#ffffff','#B4FF00']} speed="4s" style={{ fontFamily: 'var(--font-serif)', fontSize: 'inherit', lineHeight: 'inherit' }}>
-                  <SplitText text="IGNACIO JR." baseDelay={.52} />
-                </GradientText>
+              <span className="gradient-name" style={{
+                display: 'block',
+                fontFamily: 'var(--font-serif)',
+                fontStyle: 'italic',
+                fontWeight: 900,
+                fontSize: 'clamp(2.8rem,11vw,10rem)',
+                letterSpacing: '-.02em',
+                lineHeight: .9,
+              }}>
+                <SplitText text="IGNACIO JR." baseDelay={.52} />
               </span>
             </h1>
           )}
