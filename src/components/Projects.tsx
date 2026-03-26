@@ -12,7 +12,7 @@ const projects = [
     descShort: 'Assistente IA conversacional em Streamlit.',
     tech: ['Python', 'Streamlit', 'LLM', 'Pandas'],
     link: 'https://mavisai.streamlit.app/',
-    img: null as string | null,
+    img: '/projects/mavis.png' as string | null,
     bars: [60, 85, 45, 90, 70, 55, 80, 65, 95, 40],
   },
   {
@@ -20,11 +20,11 @@ const projects = [
     category: 'Next.js · TypeScript',
     title: 'SmartPass App',
     titleItalic: 'App',
-    desc: 'Aplicação web moderna construída com Next.js e deploy na Vercel. Interface responsiva e performática para gestão de acessos com design limpo e experiência fluida.',
-    descShort: 'App web moderno com Next.js e Vercel.',
+    desc: 'Aplicação web moderna construída com Next.js e deploy na Vercel. Interface responsiva e performática para gestão de reuniões e controle de presença com mapa integrado.',
+    descShort: 'App web moderno de gestão de reuniões e presença.',
     tech: ['Next.js', 'React', 'TypeScript', 'Tailwind'],
     link: 'https://smartpass-lake.vercel.app/',
-    img: null as string | null,
+    img: '/projects/smartpass.png' as string | null,
     bars: [40, 70, 55, 85, 60, 75, 50, 80, 45],
   },
   {
@@ -36,7 +36,7 @@ const projects = [
     descShort: 'Dashboard estoque vs carteira com filtros dinâmicos.',
     tech: ['Python', 'Pandas', 'Plotly', 'Streamlit'],
     link: 'https://pqualidade.streamlit.app/',
-    img: null as string | null,
+    img: '/projects/estoque-carteira.png' as string | null,
     bars: [75, 50, 90, 65, 80, 45, 70, 85, 55],
   },
   {
@@ -48,7 +48,7 @@ const projects = [
     descShort: 'Portal centralizado de treinamentos de qualidade.',
     tech: ['Python', 'Streamlit'],
     link: 'https://treinamentoqual.streamlit.app/',
-    img: null as string | null,
+    img: '/projects/treinamentos-qualidade.png' as string | null,
     bars: [50, 80, 65, 95, 55, 75, 85, 60, 70],
   },
   {
@@ -56,11 +56,11 @@ const projects = [
     category: 'Streamlit · Power Platform',
     title: 'Curso Power Platform',
     titleItalic: 'Power Platform',
-    desc: 'Plataforma de ensino do curso Power Platform com módulos de conteúdo, exercícios práticos e acompanhamento de alunos via Streamlit.',
-    descShort: 'Plataforma de ensino Power Platform.',
+    desc: 'Plataforma de ensino do curso Power Platform com módulos de conteúdo, exercícios práticos e acompanhamento de alunos via Streamlit. 41+ fórmulas, 82 questões e 8 controles interativos.',
+    descShort: 'Plataforma de ensino interativa Power Platform.',
     tech: ['Python', 'Streamlit', 'Power Apps', 'Power Automate'],
     link: 'https://powertreinamento.streamlit.app/',
-    img: null as string | null,
+    img: '/projects/curso-power-platform.png' as string | null,
     bars: [65, 80, 50, 75, 90, 55, 70, 85, 45],
   },
   {
@@ -68,11 +68,11 @@ const projects = [
     category: 'HTML · CSS · JS',
     title: 'Chamada Power Platform',
     titleItalic: 'Power Platform',
-    desc: 'Landing page do curso Power Platform com chamada para inscrições, publicada via GitHub Pages. Design responsivo e objetivo para conversão de interessados.',
-    descShort: 'Landing page do curso Power Platform.',
+    desc: 'Landing page do bootcamp Power Platform com chamada para inscrições, publicada via GitHub Pages. Design editorial com robô 3D, roadmap de 8 semanas e métricas de impacto.',
+    descShort: 'Landing page editorial do bootcamp Power Platform.',
     tech: ['HTML', 'CSS', 'JavaScript'],
     link: 'https://oluisjr.github.io/',
-    img: null as string | null,
+    img: '/projects/chamada-power-platform.png' as string | null,
     bars: [70, 55, 80, 60, 90, 45, 75, 85, 50],
   },
   {
@@ -137,7 +137,12 @@ function FeaturedCard({ p }: { p: typeof projects[0] }) {
     <div ref={ref} style={{ marginBottom: '1.5rem', opacity: vis ? 1 : 0, transform: vis ? 'none' : 'translateY(36px)', transition: 'all .85s var(--ease-expo)' }}>
       <div className="dash-card detail-grid" onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
         style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', borderColor: hov ? `${p.accent}35` : undefined }}>
-        {p.img ? <img src={p.img} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', minHeight: 360 }} /> : <MockWin p={p} h={360} />}
+        {p.img
+          ? <div style={{ position: 'relative', overflow: 'hidden', minHeight: 360 }}>
+              <img src={p.img} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', minHeight: 360, transition: 'transform .6s var(--ease-expo)', transform: hov ? 'scale(1.04)' : 'scale(1)' }} />
+              <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to right, transparent 60%, var(--bg-card))', pointerEvents: 'none' }} />
+            </div>
+          : <MockWin p={p} h={360} />}
         <div style={{ padding: '2.5rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', borderLeft: '1px solid var(--dashboard-border)' }}>
           <div>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '1.5rem' }}>
@@ -178,7 +183,12 @@ function SmallCard({ p, delay = 0 }: { p: typeof projects[0]; delay?: number }) 
   return (
     <div ref={ref} className="glass glass-hover" onMouseEnter={() => setHov(true)} onMouseLeave={() => setHov(false)}
       style={{ opacity: vis ? 1 : 0, transform: vis ? (hov ? 'translateY(-5px)' : 'none') : 'translateY(36px)', transition: `all .7s var(--ease-expo) ${delay}s`, borderColor: hov ? `${p.accent}28` : undefined }}>
-      {p.img ? <img src={p.img} alt={p.title} style={{ width: '100%', height: 180, objectFit: 'cover' }} /> : <MockWin p={p} h={180} />}
+      {p.img
+        ? <div style={{ position: 'relative', overflow: 'hidden', height: 180 }}>
+            <img src={p.img} alt={p.title} style={{ width: '100%', height: 180, objectFit: 'cover', objectPosition: 'top', transition: 'transform .5s var(--ease-expo)', transform: hov ? 'scale(1.05)' : 'scale(1)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, transparent 50%, rgba(0,0,0,.25))', pointerEvents: 'none' }} />
+          </div>
+        : <MockWin p={p} h={180} />}
       <div style={{ padding: '1.5rem' }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '.65rem' }}>
           <span style={{ fontFamily: 'var(--font-mono)', fontSize: '.56rem', letterSpacing: '.14em', color: p.accent, textTransform: 'uppercase' }}>{p.category}</span>
@@ -193,14 +203,13 @@ function SmallCard({ p, delay = 0 }: { p: typeof projects[0]; delay?: number }) 
           {p.tech.map(t => <span key={t} style={{ fontFamily: 'var(--font-mono)', fontSize: '.52rem', letterSpacing: '.08em', color: 'var(--gray-light)', border: '1px solid var(--border)', padding: '.2rem .55rem', borderRadius: 'var(--r-pill)', textTransform: 'uppercase' }}>{t}</span>)}
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '1.1rem', borderTop: '1px solid var(--border)' }}>
-          {isInternal ? (
-            <span style={{ fontFamily: 'var(--font-mono)', fontSize: '.58rem', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gray-mid)' }}>Interno</span>
-          ) : (
-            <a href={p.link} target="_blank" rel="noopener noreferrer"
-              style={{ fontFamily: 'var(--font-mono)', fontSize: '.58rem', letterSpacing: '.14em', textTransform: 'uppercase', color: p.accent, textDecoration: 'none', transition: 'letter-spacing .25s' }}
-              onMouseEnter={e => (e.currentTarget.style.letterSpacing = '.22em')}
-              onMouseLeave={e => (e.currentTarget.style.letterSpacing = '.14em')}>Ver →</a>
-          )}
+          {isInternal
+            ? <span style={{ fontFamily: 'var(--font-mono)', fontSize: '.58rem', letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--gray-mid)' }}>Interno</span>
+            : <a href={p.link} target="_blank" rel="noopener noreferrer"
+                style={{ fontFamily: 'var(--font-mono)', fontSize: '.58rem', letterSpacing: '.14em', textTransform: 'uppercase', color: p.accent, textDecoration: 'none', transition: 'letter-spacing .25s' }}
+                onMouseEnter={e => (e.currentTarget.style.letterSpacing = '.22em')}
+                onMouseLeave={e => (e.currentTarget.style.letterSpacing = '.14em')}>Ver →</a>
+          }
           <span style={{ fontFamily: 'var(--font-serif)', fontStyle: 'italic', fontSize: '2rem', color: 'rgba(255,255,255,.04)', userSelect: 'none' }}>{p.id}</span>
         </div>
       </div>
