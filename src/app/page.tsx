@@ -6,6 +6,7 @@ import Loader           from '@/components/Loader'
 import Cursor           from '@/components/Cursor'
 import Navbar           from '@/components/Navbar'
 import About            from '@/components/About'
+import Impact           from '@/components/Impact'
 import Projects         from '@/components/Projects'
 import Stack            from '@/components/Stack'
 import Publications     from '@/components/Publications'
@@ -171,6 +172,7 @@ function PageContent() {
       {/* ══ SECTIONS ══ */}
       <div style={{ position: 'relative', zIndex: 2 }}>
         <About />
+        <Impact />
         <Projects />
         <Stack />
         <Publications />

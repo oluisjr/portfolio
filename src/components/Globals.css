@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Syne:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-  --bg:         #070707;
-  --bg-card:    #0c0c0c;
-  --lime:       #c8ff00;
-  --lime-10:    rgba(200,255,0,0.10);
-  --lime-20:    rgba(200,255,0,0.20);
+  --bg:         #0a0e27;
+  --bg-card:    #0f1229;
+  --lime:       #06b6d4;
+  --lime-10:    rgba(6,182,212,0.10);
+  --lime-20:    rgba(6,182,212,0.20);
   --white:      #f0ede6;
   --gray:       #3a3a3a;
   --gray-mid:   #606060;

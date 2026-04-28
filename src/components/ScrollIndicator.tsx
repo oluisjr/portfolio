@@ -4,6 +4,7 @@ import { useEffect, useState, useCallback } from 'react'
 const sections = [
   { id: 'hero',         label: 'Início'      },
   { id: 'about',        label: 'Sobre'        },
+  { id: 'impact',       label: 'Impacto'      },
   { id: 'projects',     label: 'Projetos'     },
   { id: 'stack',        label: 'Stack'        },
   { id: 'publications', label: 'Publicações'  },
