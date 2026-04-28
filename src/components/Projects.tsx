@@ -314,12 +314,4 @@ export default function Projects() {
       </div>
     </section>
   )
-
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <a href="https://github.com/oluisjr" target="_blank" rel="noopener noreferrer" className="glass-btn">
-          Ver todos no GitHub →
-        </a>
-      </div>
-    </section>
-  )
 }

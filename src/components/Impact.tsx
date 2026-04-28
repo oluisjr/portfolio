@@ -119,10 +119,9 @@ function AchievementCard({ achievement, index }: { achievement: typeof achieveme
             fontFamily: 'var(--font-body)',
             fontSize: '1.2rem',
             fontWeight: 600,
-            color: 'var(--white)',
+            color: hov ? achievement.color : 'var(--white)',
             marginBottom: '.75rem',
             transition: 'color .3s',
-            color: hov ? achievement.color : 'var(--white)',
           }}
         >
           {achievement.title}
